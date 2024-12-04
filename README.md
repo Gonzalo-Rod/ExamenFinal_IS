@@ -9,7 +9,7 @@
 - **Endpoint:** `GET /mensajeria/contactos`
 - **Ejemplo de petición:**
   ```bash
-  curl -X GET "http://127.0.0.1:5000/mensajeria/contactos?mialias=GRodriguez"
+  curl -X GET "http://127.0.0.1:5000/mensajes/contactos?mialias=GRodriguez"
   ```
 
 
@@ -17,7 +17,7 @@
 - **Endpoint:** `POST /mensajeria/contactos/<alias>`
 - **Ejemplo de petición:**
   ```bash
-  curl -X POST "http://127.0.0.1:5000/mensajeria/contactos/GRodriguez" \
+  curl -X POST "http://127.0.0.1:5000/mensajes/contactos/GRodriguez" \
   -H "Content-Type: application/json" \
   -d '{"contacto": "JNuevo", "nombre": "Nuevo Usuario"}'
   ```
@@ -26,17 +26,17 @@
 - **Endpoint:** `POST /mensajeria/enviar`
 - **Ejemplo de petición:**
   ```bash
-  curl -X POST "http://127.0.0.1:5000/mensajeria/enviar" \
+  curl -X POST "http://127.0.0.1:5000/mensajes/enviar" \
   -H "Content-Type: application/json" \
   -d '{"usuario": "GRodriguez", "contacto": "PEddison", "mensaje": "Hola, Eddison!"}'
   ```
 
 
 ### 4. Verificar Mensajes Recibidos
-- **Endpoint:** `GET /mensajeria/recibidos`
+- **Endpoint:** `GET /mensajes/recibidos`
 - **Ejemplo de petición:**
   ```bash
-  curl -X GET "http://127.0.0.1:5000/mensajeria/recibidos?mialias=PEddison"
+  curl -X GET "http://127.0.0.1:5000/mensajes/recibidos?mialias=PEddison"
   ```
 
 
