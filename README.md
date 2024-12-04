@@ -1,7 +1,7 @@
 # ExamenFinal_IS
 # Integrantes 
-## Michel Marcelo Jaramillo Alfaro
-## Gonzalo Alonso Rodrigues Gutierrez
+### Michel Marcelo Jaramillo Alfaro
+### Gonzalo Alonso Rodrigues Gutierrez
 
 
 # Ejemplos de ENDPOINTS a utlizar 
