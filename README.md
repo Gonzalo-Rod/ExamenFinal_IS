@@ -1,4 +1,72 @@
 # ExamenFinal_IS
+# Ejemplos de ENDPOINTS a utlizar 
+### 1. Obtener Contactos
+- **Endpoint:** `GET /mensajeria/contactos`
+- **Ejemplo de petición:**
+  ```bash
+  curl -X GET "http://127.0.0.1:5000/mensajeria/contactos?mialias=GRodriguez"
+  ```
+- **Respuesta esperada:**
+  ```json
+  {
+      "PCesar": "Cesar",
+      "PEddison": "Eddison",
+      "JMarcelo": "Marcelo"
+  }
+  ```
+
+### 2. Agregar Contacto
+- **Endpoint:** `POST /mensajeria/contactos/<alias>`
+- **Ejemplo de petición:**
+  ```bash
+  curl -X POST "http://127.0.0.1:5000/mensajeria/contactos/GRodriguez" \
+  -H "Content-Type: application/json" \
+  -d '{"contacto": "JNuevo", "nombre": "Nuevo Usuario"}'
+  ```
+- **Respuesta esperada:**
+  ```json
+  {
+      "mensaje": "Contacto agregado exitosamente"
+  }
+  ```
+
+### 3. Enviar Mensaje
+- **Endpoint:** `POST /mensajeria/enviar`
+- **Ejemplo de petición:**
+  ```bash
+  curl -X POST "http://127.0.0.1:5000/mensajeria/enviar" \
+  -H "Content-Type: application/json" \
+  -d '{"usuario": "GRodriguez", "contacto": "PEddison", "mensaje": "Hola, Eddison!"}'
+  ```
+- **Respuesta esperada:**
+  ```json
+  {
+      "mensaje": "Mensaje enviado exitosamente"
+  }
+  ```
+
+### 4. Verificar Mensajes Recibidos
+- **Endpoint:** `GET /mensajeria/recibidos`
+- **Ejemplo de petición:**
+  ```bash
+  curl -X GET "http://127.0.0.1:5000/mensajeria/recibidos?mialias=PEddison"
+  ```
+- **Respuesta esperada:**
+  ```json
+  [
+      {
+          "remitente": "GRodriguez",
+          "destinatario": "PEddison",
+          "contenido": "Hola, Eddison!",
+          "fechaEnvio": "03-12-2024 14:35:22"
+      }
+  ]
+  ```
+
+
+
+
+
 # Pregunta 3 
 # Implementación de Cambios en el Código
 
@@ -18,7 +86,7 @@
 - Crear un nuevo endpoint `/mensajeria/usuario/<alias>/delete` (DELETE) para eliminar usuarios.
 - Al eliminar un usuario, mantener los mensajes existentes, pero evitar referencias a usuarios eliminados.
 
----
+
 
 ### 2. Nuevos Casos de Prueba
 
@@ -34,7 +102,7 @@
 - Intentar eliminar un usuario que no existe.
 - Acceder a los contactos o mensajes de un usuario eliminado.
 
----
+
 
 ### 3. Riesgo de Romper Funcionalidades Existentes
 
