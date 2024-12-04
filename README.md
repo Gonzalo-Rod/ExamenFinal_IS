@@ -1,4 +1,9 @@
 # ExamenFinal_IS
+# Integrantes 
+## Michel Marcelo Jaramillo Alfaro
+## Gonzalo Alonso Rodrigues Gutierrez
+
+
 # Ejemplos de ENDPOINTS a utlizar 
 ### 1. Obtener Contactos
 - **Endpoint:** `GET /mensajeria/contactos`
